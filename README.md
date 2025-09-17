@@ -23,3 +23,6 @@ The way you'll do this at work is by exporting images directly from Figma — we
 - [Project Demo Video] (https://drive.google.com/file/d/1dTcDT9VLjJfKuBlNeWdbz6avr4Ni2tnP/view?usp=sharing)
 
 Good luck and have fun!
+
+**project link**
+https://github.com/DamariMorgado/se_project_spots.git
