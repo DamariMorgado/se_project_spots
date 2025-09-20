@@ -64,7 +64,7 @@
   opacity: 1;
 }
 
-.profile__add-button {
+.profile__new-post-button {
   margin-left: auto;
   margin-top: auto;
   background-color: #212121;
@@ -115,7 +115,7 @@
     margin: 0 0 20px;
   }
 
-  .profile__add-button {
+  .profile__new-post-button {
     margin: 0;
     width: 100%;
   }
