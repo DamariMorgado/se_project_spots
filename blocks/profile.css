@@ -39,7 +39,6 @@
   line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
-  max-width: 420px;
   font-size: 18px;
   line-height: 100%;
   font-weight: 500;
@@ -83,7 +82,7 @@
   cursor: pointer;
 }
 
-.profile__add-button:hover {
+.profile__new-post-button:hover {
   opacity: 0.8;
 }
 

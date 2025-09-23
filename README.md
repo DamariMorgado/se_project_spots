@@ -5,6 +5,8 @@
 - Intro
 - Figma
 - Images
+- Technologies & Techniques
+- Screenshots
 
 **Intro**
 
@@ -17,6 +19,25 @@ This project is made so all the elements are displayed correctly on popular scre
 **Images**
 
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
+
+**Technologies & Techniques**
+
+- **HTML**: Used for the structure of the website
+- **CSS**: Styled the page and made it look nice
+- **JavaScript**: Added interactivity like opening and closing modals
+- **CSS Transitions**: Made the modals fade in and out smoothly
+- **Responsive Design**: Made sure it works on different screen sizes
+
+**Screenshots**
+
+![Desktop View](./images/desktop-screenshot.png)
+_Main page showing profile section and image cards_
+
+![Modal Interaction](./images/modal-screenshot.png)
+_Edit profile modal with smooth transition effects_
+
+![Mobile View](./images/mobile-screenshot.png)
+_Responsive design on mobile devices_
 
 **Video**
 
