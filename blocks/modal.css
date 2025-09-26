@@ -47,10 +47,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(../images/closeLogo.svg);
+  background-repeat: no-repeat;
 }
 
 .modal__close-button:hover {
-  color: #666;
+  opacity: 0.7;
 }
 
 .modal__title {
@@ -128,8 +130,8 @@
   }
 
   .modal__close-button {
-    top: 20px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
   }
 
   .modal__title {
