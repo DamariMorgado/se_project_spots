@@ -48,7 +48,7 @@
           </ul>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer page__section">
         <p class="footer__text">@2025 Spots</p>
       </footer>
       <div class="modal" id="edit-profile-modal">
@@ -63,6 +63,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                required
               />
             </label>
             <label for="profile-description-input" class="modal__label">
@@ -72,6 +73,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -90,6 +92,7 @@
                 type="url"
                 class="modal__input"
                 placeholder="Place a link to the picture"
+                required
               />
             </label>
             <label for="card-caption-input" class="modal__label">
@@ -99,6 +102,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -106,7 +110,9 @@
         </div>
       </div>
       <div class="modal" id="preview-modal">
-        <div class="modal__image-container modal__container_type_preview">
+        <div
+          class="modal__image-container modal__container modal__container_type_preview"
+        >
           <button
             type="button"
             class="modal__close-button modal__close-button_type_preview"

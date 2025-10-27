@@ -19,6 +19,12 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
 }
 
 .card__content {
@@ -29,7 +35,8 @@
 }
 
 .card__like-button {
-  background-image: url("../images/like-icon.svg");
+  background-image: url("../images/Like-Icon.svg");
+  background-repeat: no-repeat;
   width: 23px;
   height: 20px;
   border: none;

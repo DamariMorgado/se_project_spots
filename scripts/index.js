@@ -138,6 +138,7 @@ function handleAddCardSubmit(event) {
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+  newPostForm.reset();
   closeModal(newPostModal);
 }
 
