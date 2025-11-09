@@ -115,6 +115,25 @@
   border-color: #8b5cf6;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  display: block;
+  color: red;
+  margin-top: 8px;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.modal__input {
+  margin-bottom: 0;
+}
+
 .modal__input::placeholder {
   color: #2121214d;
   font-family: "Poppins", sans-serif;
