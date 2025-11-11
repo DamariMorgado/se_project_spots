@@ -25,7 +25,7 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
-const cardsList = document.querySelector(".cards__list");
+const cardsListEl = document.querySelector(".cards__list");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImage = previewModal.querySelector(".modal__image");
@@ -65,12 +65,31 @@ const initialCards = [
   },
 ];
 
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
+  modal.addEventListener("click", handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscape);
+  modal.removeEventListener("click", handleOverlayClick);
 }
 
 function getCardElement(data) {
@@ -143,7 +162,7 @@ function handleAddCardSubmit(event) {
     link: cardImageInput.value,
   };
   const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
+  cardsListEl.prepend(cardElement);
   newPostForm.reset();
   disableButton(cardSubmitButton, settings);
   closeModal(newPostModal);
@@ -154,5 +173,5 @@ newPostForm.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
+  cardsListEl.append(cardElement);
 });

@@ -120,9 +120,13 @@
 }
 
 .modal__error {
-  display: block;
+  display: none;
   color: red;
   margin-top: 8px;
+}
+
+.modal__error_visible {
+  display: block;
 }
 
 .modal__label {
@@ -159,6 +163,12 @@
   background-color: #333333;
 }
 
+.modal__submit-button_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .modal__image-container {
   position: relative;
 }
@@ -184,11 +194,6 @@
 }
 
 @media (max-width: 627px) {
-  .modal__close-button_type_preview {
-    top: -48px;
-    right: 0;
-  }
-
   .modal__image {
     max-width: 90vw;
   }
@@ -202,11 +207,6 @@
   .modal__close-button {
     top: 12px;
     right: 12px;
-  }
-
-  .modal__close-button_type_preview {
-    top: -48px;
-    right: 0;
   }
 
   .modal__title {
