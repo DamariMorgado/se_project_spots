@@ -39,11 +39,10 @@ _Edit profile modal with smooth transition effects_
 ![Mobile View](./images/mobile-screenshot.png)
 _Responsive design on mobile devices_
 
-**Video**
+## Project Pitch Video
 
-- [Project Demo Video] (https://drive.google.com/file/d/1dTcDT9VLjJfKuBlNeWdbz6avr4Ni2tnP/view?usp=sharing)
-
-Good luck and have fun!
+Check out [this video](https://drive.google.com/file/d/1UFgzN5Xk16E5LK4FF8kNS0LVx61W4_2G/view?usp=sharing), where I describe my
+project and some challenges I faced while building it.
 
 **project link**
 https://damarimorgado.github.io/se_project_spots/
