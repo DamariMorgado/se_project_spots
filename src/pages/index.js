@@ -1,3 +1,14 @@
+import "../pages/index.css";
+import {
+  enableValidation,
+  resetValidation,
+  disableButton,
+  settings,
+} from "../scripts/validation.js";
+import logoImage from "../images/Logo.svg";
+import avatarImage from "../images/spots-images/avatar.jpg";
+import pencilIcon from "../images/Group2.svg";
+import plusIcon from "../images/Group26.svg";
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseButton = editProfileModal.querySelector(
@@ -175,3 +186,10 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsListEl.append(cardElement);
 });
+
+enableValidation(settings);
+
+document.querySelector(".header__logo").src = logoImage;
+document.querySelector(".profile__avatar").src = avatarImage;
+document.querySelector(".profile__edit-button img").src = pencilIcon;
+document.querySelector(".profile__new-post-button img").src = plusIcon;
