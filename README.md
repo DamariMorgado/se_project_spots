@@ -46,3 +46,8 @@ project and some challenges I faced while building it.
 
 **project link**
 https://damarimorgado.github.io/se_project_spots/
+
+## Project Pitch Video 2
+
+Check out [this video](https://www.loom.com/share/1b8b00ee564f4c79813678ec89163d9a), where I describe my
+project and some challenges I faced while building it.
