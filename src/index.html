@@ -16,7 +16,12 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img src="" alt="Bessie Coleman" class="profile__avatar" />
+          <div class="profile__avatar-container">
+            <img src="" alt="Bessie Coleman" class="profile__avatar" />
+            <button type="button" class="profile__avatar-button">
+              <img src="" alt="Edit avatar" class="profile__pencil-icon" />
+            </button>
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -127,6 +132,35 @@
           ></button>
           <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
+        </div>
+      </div>
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">Change profile picture</h2>
+          <form class="modal__form" novalidate>
+            <label for="avatar-input" class="modal__label">
+              Image link
+              <input
+                id="avatar-input"
+                type="url"
+                class="modal__input"
+                placeholder="Image link"
+                required
+              />
+              <span id="avatar-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="delete-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h2 class="modal__title">Are you sure?</h2>
+          <form class="modal__form" novalidate>
+            <button type="submit" class="modal__submit-button">Delete</button>
+          </form>
         </div>
       </div>
     </div>
