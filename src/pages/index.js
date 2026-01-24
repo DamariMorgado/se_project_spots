@@ -26,14 +26,14 @@ let selectedCardId;
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseButton = editProfileModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button",
 );
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
-  "#profile-name-input"
+  "#profile-name-input",
 );
 const editProfileDescriptionInput = editProfileModal.querySelector(
-  "#profile-description-input"
+  "#profile-description-input",
 );
 
 const newPostButton = document.querySelector(".profile__new-post-button");
@@ -46,6 +46,7 @@ const cardSubmitButton = newPostModal.querySelector(".modal__submit-button");
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
+const profileAvatarEl = document.querySelector(".profile__avatar");
 
 const cardTemplate = document
   .querySelector("#card-template")
@@ -56,12 +57,12 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalImage = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
 const previewModalCloseButton = previewModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button",
 );
 
 const avatarModal = document.querySelector("#edit-avatar-modal");
 const avatarModalCloseButton = avatarModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button",
 );
 const avatarForm = avatarModal.querySelector(".modal__form");
 const avatarInput = document.querySelector("#avatar-input");
@@ -69,9 +70,19 @@ const avatarModalButton = document.querySelector(".profile__avatar-button");
 
 const deleteModal = document.querySelector("#delete-modal");
 const deleteModalCloseButton = deleteModal.querySelector(
-  ".modal__close-button"
+  ".modal__close-button",
+);
+const deleteModalCancelButton = deleteModal.querySelector(
+  ".modal__cancel-button",
 );
 const deleteForm = deleteModal.querySelector(".modal__form");
+
+const headerLogoEl = document.querySelector(".header__logo");
+const editButtonIconEl = document.querySelector(".profile__edit-button img");
+const newPostButtonIconEl = document.querySelector(
+  ".profile__new-post-button img",
+);
+const avatarPencilIconEl = document.querySelector(".profile__pencil-icon");
 
 const initialCards = [
   {
@@ -189,7 +200,7 @@ editProfileButton.addEventListener("click", function () {
   resetValidation(
     editProfileForm,
     [editProfileNameInput, editProfileDescriptionInput],
-    settings
+    settings,
   );
   openModal(editProfileModal);
 });
@@ -219,6 +230,10 @@ avatarModalCloseButton.addEventListener("click", function () {
 });
 
 deleteModalCloseButton.addEventListener("click", function () {
+  closeModal(deleteModal);
+});
+
+deleteModalCancelButton.addEventListener("click", function () {
   closeModal(deleteModal);
 });
 
@@ -281,7 +296,7 @@ function handleAvatarSubmit(event) {
   api
     .editAvatar(avatarInput.value)
     .then((data) => {
-      document.querySelector(".profile__avatar").src = data.avatar;
+      profileAvatarEl.src = data.avatar;
       avatarForm.reset();
       closeModal(avatarModal);
     })
@@ -324,7 +339,7 @@ api
     // Set user info
     profileNameEl.textContent = userData.name;
     profileDescriptionEl.textContent = userData.about;
-    document.querySelector(".profile__avatar").src = userData.avatar;
+    profileAvatarEl.src = userData.avatar;
 
     // Render cards
     cards.forEach((item) => {
@@ -338,7 +353,7 @@ api
 
 enableValidation(settings);
 
-document.querySelector(".header__logo").src = logoImage;
-document.querySelector(".profile__edit-button img").src = pencilIcon;
-document.querySelector(".profile__new-post-button img").src = plusIcon;
-document.querySelector(".profile__pencil-icon").src = pencilIcon;
+headerLogoEl.src = logoImage;
+editButtonIconEl.src = pencilIcon;
+newPostButtonIconEl.src = plusIcon;
+avatarPencilIconEl.src = pencilIcon;
