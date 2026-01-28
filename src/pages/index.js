@@ -67,6 +67,7 @@ const avatarModalCloseButton = avatarModal.querySelector(
 const avatarForm = avatarModal.querySelector(".modal__form");
 const avatarInput = document.querySelector("#avatar-input");
 const avatarModalButton = document.querySelector(".profile__avatar-button");
+const avatarSubmitButton = avatarModal.querySelector(".modal__submit-button");
 
 const deleteModal = document.querySelector("#delete-modal");
 const deleteModalCloseButton = deleteModal.querySelector(
@@ -298,6 +299,7 @@ function handleAvatarSubmit(event) {
     .then((data) => {
       profileAvatarEl.src = data.avatar;
       avatarForm.reset();
+      disableButton(avatarSubmitButton, settings);
       closeModal(avatarModal);
     })
     .catch((err) => {
